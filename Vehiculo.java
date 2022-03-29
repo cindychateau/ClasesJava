@@ -6,12 +6,15 @@ class Vehiculo {
     private String color;
     private int ruedas;
 
-    public Vehiculo() {
+    private static int cantidadVehiculos = 0; //Una variable estática y se comparte con todas las instancias de la clase. Parecido a una variable de clase en Python
 
+    public Vehiculo() {
+        cantidadVehiculos++;
     }
 
     public Vehiculo(String color) {
         this.color = color;
+        cantidadVehiculos++;
     }
 
     public Vehiculo(String color, String marca, String modelo) {
@@ -19,11 +22,13 @@ class Vehiculo {
         this.color = color; //carro3.color = "rojo";
         this.marca = marca;
         this.modelo = modelo;
+        cantidadVehiculos++;
     }
 
     public Vehiculo(String color, int ruedas) {
         this.color = color;
         this.ruedas = ruedas;
+        cantidadVehiculos++;
     }
 
     public String getColor() {
@@ -68,6 +73,10 @@ class Vehiculo {
 
     public void arrancar() {
         System.out.println("RUUUM");
+    }
+
+    public static int getCantidadVehiculos() {
+        return cantidadVehiculos;
     }
 
 }

@@ -64,8 +64,9 @@ class TestVehiculo {
 
         System.out.println("Auto2 - color:"+auto2Color2+" marcar:"+auto2Marca2+" modelo:"+auto2Modelo2);
 
+        //Vehiculo.cantidadVehiculos = 100;
        
-
+        System.out.println("Cantidad Vehiculos:"+auto2.getCantidadVehiculos());
 
     }
 
